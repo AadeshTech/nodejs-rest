@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
   });
 
 exports.sendVerificationEmail = async (to, token) => {
-  const url = `https://0080-2405-201-3021-9818-e015-f5c0-cf3d-6bb0.ngrok-free.app/api/auth/verify-email/${token}`;
+  const url = `https://nodejs-rest-1.onrender.com/api/auth/verify-email/${token}`;
   await transporter.sendMail({
     from: process.env.EMAIL_FROM,
     to,
