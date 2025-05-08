@@ -35,4 +35,5 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/docs/user', swaggerUi.serveFiles(swaggerUserSpec), swaggerUi.setup(swaggerUserSpec));
 app.use('/api/docs/admin', swaggerUi.serveFiles(swaggerAdminSpec), swaggerUi.setup(swaggerAdminSpec));
 
-server.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
